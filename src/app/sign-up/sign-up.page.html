@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="sign-in" routerLink="/sign-in" class="back" slot="start"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!--sign-in-->
+
+<ion-content>
+  <div class="container">
+    <div class="logo">
+      <img src="../../assets/imgs/logo.png">
+    </div>
+    <form class="form-app">
+      <ion-item lines="none">
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-input type="email" placeholder="mail"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="lock" slot="start"></ion-icon>
+        <ion-input type="password" placeholder="password"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="lock" slot="start"></ion-icon>
+        <ion-input type="password" placeholder="password"></ion-input>
+      </ion-item>
+      <ion-button type="submit" expand="block" routerLink="/home">sign in</ion-button>
+    </form>
+  </div>
+
+</ion-content>

@@ -1,0 +1,60 @@
+
+/*ion-card*/
+ion-card{
+    margin: 10px;
+    --background:transparent;
+    box-shadow: none;
+    position: relative;
+
+
+
+ion-card-content{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    color: #fff;
+
+    ion-grid{
+       padding: 0px;
+       
+       ion-col{
+           padding: 0px;
+       }
+    }
+}
+
+
+.card-ratting ion-icon {
+   
+    color: var(--ion-color-primary);
+}
+
+
+
+ion-card-header{
+    padding: 0px;
+    --background:transparent;
+}
+
+ion-card-header img{
+    height: 180px;
+    object-fit: cover;
+}
+
+}
+
+ion-footer ion-button{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 60px;
+    border-radius: 50%;
+    width: 60px;
+    --border-radius:50%;
+}
+
+
+ion-footer ion-icon {
+    font-size: 3rem;
+}
+

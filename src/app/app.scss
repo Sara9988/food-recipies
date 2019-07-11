@@ -1,0 +1,124 @@
+// App Styles
+// ----------------------------------------------------------------------------
+// Put style rules here that you want to apply to the entire application. These 
+// styles are for the entire app and not just one component. Additionally, this 
+// file can hold Sass mixins, functions, and placeholder classes to be imported 
+// and used throughout the application.
+
+
+
+ion-menu{
+  --background:transparent url(../assets/imgs/bg.png) center/cover no-repeat fixed ;
+  --width: 100%;
+    bottom: 19px;
+  ion-header{
+    ion-toolbar{
+      --background:transparent;
+        background: none !important;
+        --padding-top:0px;
+       .kalbs{
+         color: #fff;
+       }
+        ion-avatar{
+          margin: auto;
+          width: 80px;
+          height: 80px;
+          object-fit: contain;
+        }
+        .men-top{
+          text-align: center;
+          position: relative;
+        
+        }
+        .men-top:after{
+          position: absolute;
+          content: '';
+          width: 90%;
+          height: 1px;
+          background: #817f7f;
+          bottom: 0px;
+          right: 20px;
+
+        }
+        
+        .men-top h3{
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        font-weight: 400;
+        margin: 6px 0px;
+        }
+
+        .men-top span{
+          text-transform: uppercase;
+          font-size: 1.4rem;
+          display: inline-block;
+           margin-bottom: 10px;
+        }
+
+
+    }
+    
+  }
+
+  ion-content{
+    --background:transparent; 
+    --offset-top:-30px !important;
+  ion-list{
+    --ion-item-background:transparent;
+      display: flex;
+      flex-wrap: wrap;
+    --padding-start:20px;
+      margin: 0px 65px !important;
+
+    ion-menu-toggle{
+     
+      display: flex;
+     
+    width: 50%;
+    justify-content: center;
+    }
+           
+    
+        ion-item{
+             --background:transparent !important;
+             --border:none; 
+             --inner-padding-end:0px;
+             --padding-start:0px;
+             ion-label  p{
+              margin: 0px;
+              font-size: 1.3rem;
+              font-weight: 400;
+              --ion-color-step-600: #fff;
+              text-transform: capitalize;
+              padding-top: 5px;
+               text-align: center;
+            }
+            
+             .inner-icon{
+                padding: 14px;
+                text-align: center;
+                color:#fff;
+                width: 60px;
+                height: 60px;
+                background: var( --ion-color-primary);
+                border-radius: 50%;
+                line-height: 49px;
+              }
+              
+              ion-icon{
+                font-size: 2.5rem;
+              }
+          }
+
+
+        }
+  
+}
+}
+
+
+
+
+
+
+

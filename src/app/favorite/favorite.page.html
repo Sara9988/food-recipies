@@ -1,0 +1,116 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button  autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Favorite</ion-title>
+  
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon slot="icon-only" name="more"></ion-icon> 
+        </ion-button>
+      </ion-buttons>
+  
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+     <!--ion-card-->
+     <ion-card  *ngFor="let card of  cards" routerLink="/detailes">
+      <ion-card-header>
+       <img src="{{card.url}}">
+
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row class="close">
+              <ion-button><ion-icon name="close-circle"></ion-icon></ion-button>
+          </ion-row>
+         <ion-row  align-items-center>
+            <ion-col size="8" text-start class="card-ratting">
+              <h4>{{card.title}}</h4>
+              <div class="rate-star">
+                  <rating [rate]="3" class="rat-star" readonly="false"
+                    size="default"
+                    (rateChange)="onRateChange($event)">
+                  </rating>
+                  </div>
+              </ion-col>
+              <ion-col size="2" text-end  align-self-end>
+                   
+                  <ion-icon name="{{card.name}}" ></ion-icon>9h
+                
+              </ion-col>
+              <ion-col size="2" text-end  align-self-end>
+              <ion-icon name="{{card.name2}}" ></ion-icon>32
+              </ion-col>
+         </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+    <!-- <ion-card>
+        <ion-card-header>
+         <img src="../../assets/imgs/n.png">
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+              <ion-row class="close">
+                  <ion-button><ion-icon name="close-circle"></ion-icon></ion-button>
+              </ion-row>
+           <ion-row  align-items-center>
+              <ion-col size="8" text-start class="card-ratting">
+                <h4>BBQ Recipe</h4>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                </ion-col>
+                <ion-col size="2" text-end  align-self-end>
+                     
+                    <ion-icon name="time" ></ion-icon>9h
+                  
+                </ion-col>
+                <ion-col size="2" text-end  align-self-end>
+                <ion-icon name="heart" ></ion-icon>32
+                </ion-col>
+           </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <ion-card-header>
+           <img src="../../assets/imgs/n2.png">
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+                <ion-row class="close">
+                    <ion-button><ion-icon name="close-circle"></ion-icon></ion-button>
+                </ion-row>
+             <ion-row  align-items-center>
+                <ion-col size="8" text-start class="card-ratting">
+                  <h4>BBQ Recipe</h4>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  </ion-col>
+                  <ion-col size="2" text-end  align-self-end>
+                       
+                      <ion-icon name="time" ></ion-icon>9h
+                    
+                  </ion-col>
+                  <ion-col size="2" text-end  align-self-end>
+                  <ion-icon name="heart" ></ion-icon>32
+                  </ion-col>
+             </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card> -->
+  
+  </ion-content>
+ 

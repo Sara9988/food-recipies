@@ -1,0 +1,173 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>olive pizza roviel</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="like()" [ngClass]="{'active' : like_active == true}">
+        <ion-icon slot="icon-only" name="heart"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="share"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!--detailes-->
+  <ion-card>
+    <ion-card-header>
+      <img #cardImage src="../../assets/imgs/n.png">
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row align-items-center>
+          <ion-col size="12" class="title-detailes">
+            <h4>BBQ Recipe</h4>
+          </ion-col>
+          <ion-col size="6" class="starts-rate">
+            <div class="rate-star">
+              <rating [rate]="3" class="rat-star" readonly="false" size="default" (rateChange)="onRateChange($event)">
+              </rating>
+            </div>
+          </ion-col>
+          <ion-col size="6" class="t_h">
+            <ion-icon name="time"></ion-icon>
+            <span>9h</span>
+            <ion-icon name="heart"></ion-icon>
+            <span>32</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <!--ion-segment-img-->
+  <ion-segment scrollable>
+    <ion-segment-button (click)="changeImage($event, cardImage)">
+      <img src="../../assets/imgs/n.png">
+    </ion-segment-button>
+    <ion-segment-button (click)="changeImage($event, cardImage)">
+      <img src="../../assets/imgs/n2.png">
+    </ion-segment-button>
+    <ion-segment-button (click)="changeImage($event, cardImage)">
+      <img src="../../assets/imgs/n.png">
+    </ion-segment-button>
+    <ion-segment-button (click)="changeImage($event, cardImage)">
+      <img src="../../assets/imgs/n2.png">
+    </ion-segment-button>
+    <ion-segment-button (click)="changeImage($event, cardImage)">
+      <img src="../../assets/imgs/n2.png">
+    </ion-segment-button>
+    <ion-segment-button (click)="changeImage($event, cardImage)">
+      <img src="../../assets/imgs/n2.png">
+    </ion-segment-button>
+  </ion-segment>
+
+  <!--feat-->
+  <div class="feat">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <div class="feat-cont">
+            <img src="../../assets/imgs/l.png">
+            <ion-label>
+              <h5>prepration</h5>
+              <span>15min</span>
+            </ion-label>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <div class="feat-cont">
+            <img src="../../assets/imgs/l3.png">
+            <ion-label>
+              <h5>cooktime</h5>
+              <span>15min</span>
+            </ion-label>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <div class="feat-cont">
+            <img src="../../assets/imgs/l2.png">
+            <ion-label>
+              <h5>calorise</h5>
+              <span>15min</span>
+            </ion-label>
+          </div>
+        </ion-col>
+        <!-- <ion-col size="4">
+          <ion-chip>
+            <ion-avatar>
+              <ion-icon name="thermometer"></ion-icon>
+            </ion-avatar>
+            <ion-label>
+              <h5>prepration</h5>
+              <span>15min</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col size="4">
+          <ion-chip>
+            <ion-avatar>
+              <ion-icon name="trophy"></ion-icon>
+            </ion-avatar>
+            <ion-label>
+              <h5>prepration</h5>
+              <span>15min</span>
+            </ion-label>
+          </ion-chip>
+        </ion-col> -->
+
+      </ion-row>
+    </ion-grid>
+  </div>
+  <!--list-->
+  <div class="collection-detailes">
+    <h3 class="hint">ingridents</h3>
+    <ion-list lines="none" class="ingridents">
+      <ion-item *ngFor="let lest of collectItem">
+        <ion-label>{{lest. title_list}}</ion-label>
+      </ion-item>
+    </ion-list>
+    <div class="instruction">
+      <h3 class="hint">instructions</h3>
+      <p>Cut the top off the garlic head. Drizzle it with about 1 tablespoon olive oil, season with salt and pepper, to
+        taste, and wrap in alumium</p>
+    </div>
+    <!--addcomment-->
+    <div class="add-comment">
+      <ion-button type="button" Expand="block" class="g-button" (click)="add()">
+        comment
+      </ion-button>
+      <ion-item lines="none">
+        <ion-textarea placeholder="Enter more information here..." rows="4" *ngIf="showTextArea"></ion-textarea>
+      </ion-item>
+
+    </div>
+    <!--avtar-->
+    <ion-item class="reviews" lines="none" *ngFor="let review of sponsers">
+      <ion-avatar slot="start">
+        <img src="{{review.picDetail}}">
+      </ion-avatar>
+      <ion-label>
+        <ion-grid>
+          <ion-row>
+            <ion-col siz="6">
+              <h4>{{review.titleSpons}}</h4>
+            </ion-col>
+            <ion-col siz="6">
+              <span>{{review.timeSponser}}</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <p>Cut the top off the garlic head. Drizzle it with about 1 tablespoon olive oil, season with salt and pepper,
+          Drizzle it with about 1 tablespoon olive oilto taste, and wrap in alumium</p>
+        <ion-button type="button" float-end>replay</ion-button>
+
+      </ion-label>
+
+    </ion-item>
+
+  </div>
+</ion-content>

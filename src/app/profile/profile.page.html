@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button  autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>profile</ion-title>
+    
+        <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon slot="icon-only" name="search"></ion-icon>
+          </ion-button>
+          <ion-button>
+            <ion-icon slot="icon-only" name="more"></ion-icon> 
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+   <form>
+    <div class="pic-profile">
+     <ion-avatar>
+    <img src="../../assets/imgs/profile.png">
+    </ion-avatar>
+    <ion-item lines="none" class="edit-prof">
+     <ion-input value="julia flib"  disabled></ion-input>
+     
+    <ion-button><ion-icon name="create"></ion-icon></ion-button>
+    </ion-item>
+      <ion-item linses="none" class="usa">
+        usa
+      </ion-item>
+    </div>
+    <div class="edit-info">
+      <ion-item lines="none">
+        <ion-icon name="call" class="contact"></ion-icon>
+          <ion-input type ="text" value="010988765655"></ion-input>
+          <ion-button class="pen"><ion-icon name="create"></ion-icon></ion-button>
+      </ion-item>
+      <ion-item lines="none">
+          <ion-icon name="mail" class="contact"></ion-icon>
+          <ion-input type ="text" value="saraamer@gmail.com"></ion-input>
+          <ion-button class="pen"><ion-icon name="create"></ion-icon></ion-button>
+      </ion-item>
+      <ion-item lines="none">
+          <ion-icon name="lock" class="contact"></ion-icon>
+          <ion-input type ="password" value="010988765655"></ion-input>
+          <ion-button class="pen"><ion-icon name="create"></ion-icon></ion-button>
+      </ion-item>
+      <ion-item lines="none">
+          <ion-icon name="pin" class="contact"></ion-icon>
+          <ion-input type ="text" value="united states"></ion-input>
+          <ion-button class="pen" text-end><ion-icon name="create"></ion-icon></ion-button>
+      </ion-item>
+      <ion-button expand="block" class="g-button" routerLink="/home">save</ion-button>
+    </div>
+  </form>
+  </div>
+</ion-content>

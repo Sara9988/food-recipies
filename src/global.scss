@@ -1,0 +1,62 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+html{
+    font-size: 65%; 
+}
+
+/*style header-pages*/
+
+ion-header ion-toolbar{
+    --background:transparent;
+      background-image: url(../../../../food/src/assets/imgs/bg.png);
+      color: #fff;
+}
+
+ion-header ion-title{
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 0px;
+}
+
+ion-header ion-button{
+    height: 48px;
+    width: 48px;
+}
+
+
+.rat-star{
+.sc-ion-buttons-md-s .button-has-icon-only.button-clear{
+    width: 20px;
+    height:20px;
+    --padding-end: 0px;
+    --padding-start:0px;
+    font-size: 10px;
+    justify-content: start;
+    color:  var( --ion-color-primary);
+}
+ion-buttons{
+    display: flex;
+    justify-content: start !important;
+}
+}
+
+
+.g-button{
+    background: var( --ion-color-primary);
+    height: 50px;
+    --border-raduis: 10px;
+    margin: 34px auto;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}

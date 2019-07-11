@@ -1,0 +1,117 @@
+
+ ion-toolbar{
+    --background:transparent !important;
+    position: absolute;
+    background: none;
+}
+
+ion-content{
+    --background:transparent;
+   background-image: url(../../assets/imgs/bg.png);
+   background-size: cover;
+   --overflow:hidden;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: scroll;
+    align-items: center;
+    
+}
+
+
+.pic-profile{
+    height: 214px;
+    display: flex;
+    align-items: center;
+     position: relative;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.pic-profile:after{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 1px;
+    background-color: #656363;
+
+}
+
+
+ion-button{
+    --background:transparent;
+    --box-shadow: 0px
+}
+
+
+.pic-profile ion-avatar{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.edit-prof{
+    --background:transparent;
+
+}
+
+.edit-prof {
+    margin: 0px 10% -25px 23%;
+    color: #fff;
+}
+
+.edit-prof  ion-input{
+     text-align: center;
+}
+
+
+.usa{
+    --background:transparent;
+    color: #fff;
+}
+
+
+
+
+/*edit-info*/
+
+.edit-info ion-item{
+    --background: transparent;
+   padding: 0px;
+   margin: 15px 0px;
+}
+
+
+.pen{
+    color: #656363;
+}
+.edit-info ion-button{
+    color: #fff;
+}
+.edit-info .contact{
+    width: 18px;
+    height: 18px;
+    background: var( --ion-color-primary);
+    border-radius: 50%;
+    padding: 12px;
+    font-size: 16px;
+    margin-inline-end: 16px;
+    color: #fff;
+
+}
+
+.edit-info ion-input{
+    color: #fff;
+}
+
+.g-button{
+    background: var( --ion-color-primary);
+    height: 50px;
+    --border-raduis: 10px;
+    margin: 34px auto;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
